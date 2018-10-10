@@ -6,7 +6,27 @@ namespace LAB02_UnitTesting
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Welcome to PseudoBank");
+        }
+
+        static void UserInput()
+        {
+            Console.WriteLine("Please select from the following options.")
+        }
+
+        static void ViewBalance()
+        {
+
+        }
+
+        static void WithdrawMoney()
+        {
+
+        }
+
+        static void AddMoney()
+        {
+
         }
     }
 }

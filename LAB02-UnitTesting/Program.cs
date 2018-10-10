@@ -40,12 +40,31 @@ namespace LAB02_UnitTesting
 
         public static void WithdrawMoney()
         {
-            Console.ReadLine();
+            try
+            {
+                int amount = int.Parse(Console.ReadLine());
+                balance -= amount;
+            }
+            catch
+            {
+                Console.WriteLine("Please enter valid amount");
+            }
+            finally
+            {
+                if (balance < 0)
+                {
+                    throw new Exception("whoops, you do not own that much money");
+                }
+            }
+
         }
 
         public static void AddMoney()
         {
-
+            int amount = int.Parse(Console.ReadLine());
+            balance += amount;
         }
+
+
     }
 }

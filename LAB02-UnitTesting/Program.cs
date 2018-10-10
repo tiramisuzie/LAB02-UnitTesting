@@ -9,28 +9,40 @@ namespace LAB02_UnitTesting
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to PseudoBank");
+            UserInput();
+        
         }
 
         public static void UserInput()
         {
+            bool loop = true;
             Console.WriteLine("Please select from the following options.");
             Console.WriteLine("Press 1 to view balance");
             Console.WriteLine("Press 2 to withdraw money");
             Console.WriteLine("Press 3 to add money");
+            Console.WriteLine("Press 4 to exit");
 
-            string input = Console.ReadLine();
-            if (input == "1")
+            while (loop)
             {
-                Console.WriteLine(ViewBalance());
+                string input = Console.ReadLine();
+                if (input == "1")
+                {
+                    Console.WriteLine(ViewBalance());
+                }
+                else if (input == "2")
+                {
+                    WithdrawMoney();
+                }
+                else if (input == "3")
+                {
+                    AddMoney();
+                }
+                else if (input == "4")
+                {
+                    loop = false;
+                }
             }
-            else if (input == "2")
-            {
-                WithdrawMoney();
-            }
-            else if (input == "3")
-            {
-                AddMoney();
-            }
+       
         }
 
         public static double ViewBalance()
